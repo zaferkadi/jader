@@ -1,0 +1,18 @@
+version: '3.4'
+
+services:
+  builder:
+    build:
+      context: .
+      target: builder
+      args:
+        - NODE_ENV=${NODE_ENV}
+      network: host
+    command: yarn start
+    env_file:
+      - .env
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules
