@@ -13,6 +13,7 @@ export const CarouselImage = styled.div.attrs<CarouselImageProps>(
   text-align: center;
   padding: 100px;
   background-size: cover;
+  background-position: 50% 50%;
 `
 
 export const CarouselContainer = styled.div(
